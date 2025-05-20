@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presidents of Zambia</title>
+  <link rel="stylesheet" href="css/sata.css">
+
+ <nav>
+    <div class="logo">Presidents of Zambia</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="menu" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+
+<a href="president.html">Back</a>
+  <link rel="stylesheet" href="styles.css"> 
+  <script src="script.js"></script>
+  
+</head>
+<body>
+  <header>
+    <h1>Michael Sata</h1>
+
+    <!-- Michael Sata -->
+   
+      <div class="details">
+        <p><strong>Early life</strong> Michael Charles Chilufya Sata was born on <b>6 July 1937</b>,and brought up in Mpika, Northern Province. He worked under
+           the Zambian Police Service as a police officer, then later as railway man and trade unionist during colonial rule. He spent some time in London working
+            on the railway as a cleaner. Among other things, he was a porter at <a href="https://en.wikipedia.org/wiki/London_Victoria_station" target="_blank">Victoria railway station</a>. Sata began actively participating in the politics of
+             Northern Rhodesia in 1963. Following independence, Sata worked his way up through the rough-and-tumble rank-and-file of the ruling <a href="https://en.wikipedia.org/wiki/United_National_Independence_Party" target="_blank">United National 
+             Independence Party (UNIP) </a> to the governorship of Lusaka in 1985. As Governor, he made his mark as a man of action with a hands on approach. He cleaned
+              up the streets, patched roadways and built bridges in the city. Afterward he became a member of parliament for Kabwata constituency in Lusaka.
+               Though once close with President Kenneth Kaunda, he became disillusioned by Kaunda's dictatorial style and he left the UNIP to join the
+               <a href="https://en.wikipedia.org/wiki/Movement_for_Multi-Party_Democracy" target="_blank">Movement for Multiparty Democracy (MMD)</a>  during the campaign for multi-party politics in 1991</p>
+     
+               <p><strong>Formation of the patriotic front</strong> In 2001, President Chiluba nominated Levy Mwanawasa as the MMD's presidential candidate for
+           the 2001 election. In frustration, Sata left the MMD and set up a new party, the <a href="https://en.wikipedia.org/wiki/Patriotic_Front_(Zambia)" target="_blank"> Patriotic Front (PF)</a>. He contested the 2001 election but did not do well—his party
+            only won one seat in parliament. Sata conceded defeat and continued to campaign</p>
+
+            <p><strong>Presidency</strong> Sata ran for President for a fourth time in the election held on <b> 20 September 2011</b>. In the early stages of the campaign he was more vitriolic in his anti-Chinese
+               rhetoric, but he later toned down his rhetoric. Results showed him receiving about 43% of the vote against 36% for Banda, and Chief Justice Ernest Sakala accordingly declared that he had won
+                the election in the early hours of <b> 23 September</b>. He was sworn in later in the day. He was said to have won because of the urban vote. Despite the toning down of his rhetoric, the investment
+                 climate in Zambia was considered uncertain in the wake of his victory.</p>
+               
+           
+        <p><strong>Achievements:</strong></p>
+        <ul>
+          <li>Advocated for pro-poor policies and social welfare programs.</li>
+          <li>Improved infrastructure, including roads and hospitals.</li>
+          <li>Strengthened local governance and decentralization.</li>
+        </ul>
+        <p><strong>Wife:</strong> <a href="https://en.wikipedia.org/wiki/Christine_Kaseba" target="_blank">Christine Kaseba</a> <img src="images/mrs sata1.jpg"" alt="Christine Kaseba"></p>
+        <p><strong>Children:</strong></p>
+        <ul>
+          <li>
+            <img src="images/mulenga 1.jpg" alt="Mulenga Sata">
+            <strong><a href="https://en.wikipedia.org/wiki/Mulenga_Sata" target="_blank">Mulenga Sata</a></strong> - Born: 1970, Spouse: Unknown. <em>Academic Background:</em> Studied political science at the University of Zambia.
+          </li>
+        </ul>
+        <p><strong>Death:</strong> October 28, 2014, in London, United Kingdom. Cause: Unknown illness (suspected heart and kidney issues).</p>
+      </div>
+    </div>
+
+
+    <footer>
+      <p></p>
+  </footer>
+  </section>
+
+
+  <script>
+    
+    
+    function toggleDetails(element) {
+      const details = element.parentElement.nextElementSibling;
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+
+   
+    function changeSlide(button, direction) {
+      const slideshow = button.parentElement;
+      const slides = slideshow.querySelectorAll('.slide');
+      let currentIndex = 0;
+
+      
+      slides.forEach((slide, index) => {
+        if (slide.style.display === 'block') {
+          currentIndex = index;
+        }
+        slide.style.display = 'none';
+      });
+
+      
+      let newIndex = currentIndex + direction;
+      if (newIndex >= slides.length) newIndex = 0;
+      if (newIndex < 0) newIndex = slides.length - 1;
+
+      slides[newIndex].style.display = 'block';
+    }
+
+    function startSlideshow(slideshow) {
+      const slides = slideshow.querySelectorAll('.slide');
+      let currentIndex = 0;
+
+      setInterval(() => {
+        slides[currentIndex].style.display = 'none';
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].style.display = 'block';
+      }, 5000);
+    }
+
+    document.querySelectorAll('.slideshow-container').forEach(slideshow => {
+      const slides = slideshow.querySelectorAll('.slide');
+      slides.forEach((slide, index) => {
+        if (index === 0) {
+          slide.style.display = 'block';
+        } else {
+          slide.style.display = 'none';
+        }
+      });
+
+     
+      startSlideshow(slideshow);
+    }); 
+  </script>
+</body>
+</html>

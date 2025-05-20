@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presidents of Zambia</title>
+  <link rel="stylesheet" href="css/levy.css"> 
+
+ <nav>
+    <div class="logo">Presidents of Zambia</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="menu" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+
+  <a href="president.html">BACK</a>
+  <link rel="stylesheet" href="styles.css"> 
+  <script src="script.js"></script>
+  
+</head>
+<body>
+  <header>
+    <h1>Levy mwanawasa</h1>
+
+    <!-- Levy Mwanawasa -->
+   
+      <div class="details">
+        <p><strong>Early life</strong> Levy Mwanawasa was born in Mufulira, Northern Rhodesia, as the second of 10 children. He held a law degree from the <a href="https://en.wikipedia.org/wiki/University_of_Zambia" target="_blank"> University of 
+          Zambia</a>  He worked in private law firms from 1974 until 1978 when he formed his own firm: Mwanawasa & Company. In 1985, Mwanawasa served as Solicitor General 
+          in the Zambian government but he went back to private practice in 1986.
+          Levy Patrick Mwanawasa
+          In 1989, he led the legal defence team for <a href="https://en.wikipedia.org/wiki/Christon_Tembo" target="_blank">Lt. Gen Christon Tembo</a>,
+           who was accused by the <a href="kenneth kaunda.html">kenneth kaunda</a> government of conspiracy to overthrow the government,
+           which was judged as an act of treason worthy of the death penalty; Tembo won the case against the state, and Mwanawasa's fame among the anti-Kaunda opposition grew.
+            After <a href="chiluba.html">Frederick chiluba</a> was elected as president, he appointed Mwanawasa as vice-president in November 1991. Mwanawasa left his firm in <b>march 1992</b>.</p>
+        
+            <p><strong>Politics</strong> Mwanawasa served as vice-president until he resigned in July 1994. In 1996 he unsuccessfully challenged Chiluba for the presidency
+           of the<a href="https://en.wikipedia.org/wiki/Movement_for_Multi-Party_Democracy" target="_blank"> Movement for  Multiparty Democracy</a>. After the loss, Mwanawasa retired from politics until the 2001 election.</p>
+           
+           <p><strong>policies</strong> Foreign investors liked Mwanawasa, owing partly to his anti-corruption drive. During his presidency, Zambia received foreign investment. The main driver of economic growth was minerals. Mwanawasa's 
+            policies helped to lower inflation and spread some benefits to the poor. Tourists and white farmers diverted from Zimbabwe and helped Zambian economy. Mwanawasa turned the Zambian town of <b>Livingstone</b>, near <b> Victoria Falls</b>,
+             into a tourist hub.[14] Zambia received a relatively large amount of aid and debt relief because of liberalisation and Mwanawasa's "stolid efforts". Overall, economic growth increased to about 6% per year.
+
+            Mwanawasa criticised President <a href="https://en.wikipedia.org/wiki/Robert_Mugabe" target="_blank"> Robert Mugabe</a> of neighbouring Zimbabwe. Mwanawasa was one of the first African leaders to publicly do so. When Mwanawasa died, Zimbabwean opposition leader <a href="https://en.wikipedia.org/wiki/Morgan_Tsvangirai" target="_blank"> Morgan Tsvangirai</a> was among the first to publicly express grief.            
+            Mwanawasa sold off <a href="https://en.wikipedia.org/wiki/Konkola_Copper_Mines" target="_blank">Konkola Copper Mines</a>  to Vedanta for $25m despite an initial asking price of $400m. An amount (i.e. $25m) the company made back in around 3 months and was later making a minimum of $500m in profit per year despite its environmental pollutions of the local community..</p>
+       
+            <p><strong>Achievements:</strong></p>
+        <ul>
+          <li>Fought corruption through the establishment of the Task Force on Corruption.</li>
+          <li>Improved economic stability and growth during his tenure.</li>
+          <li>Advocated for good governance and transparency.</li>
+        </ul>
+        <p><strong>Wife:</strong> <a href="https://en.wikipedia.org/wiki/Maureen_Mwanawasa" target="_blank">Maureen Mwanawasa</a> <img src="images/mrs levy2.jpg" alt="Maureen Mwanawasa"></p>
+        <p><strong>Children:</strong></p>
+        <ul>
+          <li>
+            <img src="images/chipo.jpg" alt="Chipokota Mwanawasa">
+            <strong><a href="https://en.wikipedia.org/wiki/Chipokota_Mwanawasa" target="_blank">Chipokota Mwanawasa</a></strong> - Born: 1980, Spouse: Unknown. <em>Academic Background:</em> Studied law at the University of Zambia.
+          </li>
+          <li>
+            <img src="https://via.placeholder.com/50" alt="Matolo Mwanawasa">
+            <strong><a href="https://en.wikipedia.org/wiki/Matolo_Mwanawasa" target="_blank">Matolo Mwanawasa</a></strong> - Born: 1982, Spouse: Unknown. <em>Academic Background:</em> Attended school in Zambia and pursued a degree in business administration.
+          </li>
+        </ul>
+        <p><strong>Death:</strong> August 19, 2008, in Paris, France. Cause: Stroke.</p>
+      </div>
+    </div>
+
+
+    <footer>
+      <p>1015044 </p>
+  </footer>
+  </section>
+
+
+  <script>
+    
+    
+    function toggleDetails(element) {
+      const details = element.parentElement.nextElementSibling;
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+
+   
+    function changeSlide(button, direction) {
+      const slideshow = button.parentElement;
+      const slides = slideshow.querySelectorAll('.slide');
+      let currentIndex = 0;
+
+      
+      slides.forEach((slide, index) => {
+        if (slide.style.display === 'block') {
+          currentIndex = index;
+        }
+        slide.style.display = 'none';
+      });
+
+      
+      let newIndex = currentIndex + direction;
+      if (newIndex >= slides.length) newIndex = 0;
+      if (newIndex < 0) newIndex = slides.length - 1;
+
+      slides[newIndex].style.display = 'block';
+    }
+
+    function startSlideshow(slideshow) {
+      const slides = slideshow.querySelectorAll('.slide');
+      let currentIndex = 0;
+
+      setInterval(() => {
+        slides[currentIndex].style.display = 'none';
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].style.display = 'block';
+      }, 5000);
+    }
+
+    document.querySelectorAll('.slideshow-container').forEach(slideshow => {
+      const slides = slideshow.querySelectorAll('.slide');
+      slides.forEach((slide, index) => {
+        if (index === 0) {
+          slide.style.display = 'block';
+        } else {
+          slide.style.display = 'none';
+        }
+      });
+
+     
+      startSlideshow(slideshow);
+    }); 
+  </script>
+</body>
+</html>

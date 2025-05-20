@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presidents of Zambia</title>
+  <link rel="stylesheet" href="css/presidents.css"> 
+  <script src="script.js"></script>
+
+ <nav>
+    <div class="logo">Presidents of Zambia</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="menu" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  
+</head>
+<body>
+  <header>
+ 
+
+  <section id="presidents">
+    <!-- Kenneth Kaunda -->
+    <div class="president kaunda">
+      <div class="president-header">
+        <div class="slideshow-container">
+          <div class="slides">
+            <img src="images/kk3.jpg"Kenneth Kaunda 1" class="slide">
+            <img src="images/kk1.avif" alt="Kenneth Kaunda 2" class="slide">
+            <img src="images/kk2.jpg" alt="Kenneth Kaunda 3" class="slide">
+
+          </div>
+         
+         
+        </div>
+      <h3> <a href="kenneth.html">1. Kenneth Kaunda (1964–1991)</a></h3>
+      </div>
+      
+
+    <!-- Frederick Chiluba -->
+    <div class="president chiluba">
+      <div class="president-header">
+        <div class="slideshow-container">
+          <div class="slides">
+            <img src="images/CHILUBA.jpg" alt="Frederick Chiluba 1" class="slide">
+            <img src="images/fred1.jpg" alt="Frederick Chiluba 2" class="slide">
+            <img src="images/fred2.jpg" alt="Frederick Chiluba 3" class="slide">
+          </div>
+         
+        </div>
+        <h3 ><a href="chiluba.html">2.Frederick Chiluba (1991–2002)</a></h3>
+      </div>
+     
+
+    <!-- Levy Mwanawasa -->
+    <div class="president mwanawasa">
+      <div class="president-header">
+        <div class="slideshow-container">
+          <div class="slides">
+            <img src="images/levy.jpg" alt="Levy Mwanawasa 1" class="slide">
+            <img src="images/levy1.jpg" alt="Levy Mwanawasa 2" class="slide">
+            <img src="images/levy3.jpg" alt="Levy Mwanawasa 3" class="slide">
+          </div>
+         
+        </div>
+        <h3><a href="levy.html">3.Levy Mwanawasa (2002–2008)</a></h3>
+      </div>
+    
+
+    <!-- Rupiah Banda -->
+    <div class="president banda">
+      <div class="president-header">
+        <div class="slideshow-container">
+          <div class="slides">
+            <img src="images/banda.jpg" alt="Rupiah Banda 1" class="slide">
+            <img src="images/banda1.gif" alt="Rupiah Banda 2" class="slide">
+            <img src="images/banda3.jpg" alt="Rupiah Banda 3" class="slide">
+          </div>
+        
+        </div>
+        <h3><a href="banda.html">4. Rupiah Banda (2008–2011)</a></h3>
+      </div>
+     
+    <!-- Michael Sata -->
+    <div class="president sata">
+      <div class="president-header">
+        <div class="slideshow-container">
+          <div class="slides">
+            <img src="images/sata3.avif" alt="Michael Sata 1" class="slide">
+            <img src="images/sata.webp" alt="Michael Sata 2" class="slide">
+            <img src="images/sata1.jpg" alt="Michael Sata 3" class="slide">
+          </div>
+          
+        </div>
+        <h3><a href="sata.html">5. Michael Sata (2011–2014)</a></h3>
+      </div>
+      
+    <!-- Edgar Lungu -->
+    <div class="president lungu">
+      <div class="president-header">
+        <div class="slideshow-container">
+          <div class="slides">
+            <img src="images/ecl1.jpg" alt="Edgar Lungu 1" class="slide">
+            <img src="images/ecl3.jpg" alt="Edgar Lungu 2" class="slide">
+            <img src="images/edger.png" alt="Edgar Lungu 3" class="slide">
+          </div>
+         
+        </div>
+        <h3><a href="edger lungu.html">6. Edgar Lungu (2015–2021)</a></h3>
+      </div>
+      
+
+    <!-- Hakainde Hichilema -->
+    <div class="president hichilema">
+      <div class="president-header">
+        <div class="slideshow-container">
+          <div class="slides">
+            <img src="images/hh.jpeg" alt="Hakainde Hichilema 1" class="slide">
+            <img src="images/hh2.jpg" alt="Hakainde Hichilema 2" class="slide">
+            <img src="images/hh3.webp" alt="Hakainde Hichilema 3" class="slide">
+          </div>
+         
+        </div>
+        <h3><a href="hichilema.html">7. Hakainde Hichilema (2021–Present)</a></h3>
+   </div>
+    
+    </div>
+
+  </section>
+
+
+  <script>
+    
+    
+    function toggleDetails(element) {
+      const details = element.parentElement.nextElementSibling;
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+
+   
+    function changeSlide(button, direction) {
+      const slideshow = button.parentElement;
+      const slides = slideshow.querySelectorAll('.slide');
+      let currentIndex = 0;
+
+      
+      slides.forEach((slide, index) => {
+        if (slide.style.display === 'block') {
+          currentIndex = index;
+        }
+        slide.style.display = 'none';
+      });
+
+      
+      let newIndex = currentIndex + direction;
+      if (newIndex >= slides.length) newIndex = 0;
+      if (newIndex < 0) newIndex = slides.length - 1;
+
+      slides[newIndex].style.display = 'block';
+    }
+
+    function startSlideshow(slideshow) {
+      const slides = slideshow.querySelectorAll('.slide');
+      let currentIndex = 0;
+
+      setInterval(() => {
+        slides[currentIndex].style.display = 'none';
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].style.display = 'block';
+      }, 5000);
+    }
+
+    document.querySelectorAll('.slideshow-container').forEach(slideshow => {
+      const slides = slideshow.querySelectorAll('.slide');
+      slides.forEach((slide, index) => {
+        if (index === 0) {
+          slide.style.display = 'block';
+        } else {
+          slide.style.display = 'none';
+        }
+      });
+
+     
+      startSlideshow(slideshow);
+    }); 
+  </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <nav>
+    <div class="logo">Zambia Presidents</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="menu" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+
+<a href="president.html">Back</a>
+  <title>presidents of Zambia</title>
+  <link rel="stylesheet" href="styles.css"> 
+  <script src="script.js"></script>
+  
+</head>
+<body>
+  <header>
+    <h1>Hakainde Hichilema</h1>
+  
+    <!-- Hakainde Hichilema -->
+   
+      <div class="details">       
+        <p><strong>PERSONAL LIFE AND CAREER:</strong> Hichilema was born in a village in <b>Monze District</b> in present-day Zambia. He received a scholarship to study at the University of Zambia and graduated in 1986 with a bachelor's degree in Economics and Business Administration. He thereafter pursued an MBA in Finance and Business Strategy at the University of Birmingham in the United Kingdom.<p>
+<p><strong>POLITICAL CAREER:</strong> Hichilema is a member of the ruling United Party for National Development, a liberal political party. Following the death of <a href="https://en.wikipedia.org/wiki/Anderson_Mazoka" target="_blank">Anderson Mazoka</a> in 2006, he was elected as the party's new President. He also served as the leader of the <b> United Democratic Alliance (UDA)</b>, an alliance of three opposition political parties.
+In the 2006 election, Hichilema was the candidate of the UDA and ran against incumbent president Levy Mwanawasa of the Movement for Multiparty Democracy and Patriotic Front candidate Michael Sata. He received the endorsement of former President Kenneth Kaunda. The election was held on <b>28 September 2006</b> and Hichilema took third place with about <b>25%</b> of the vote.
+  
+  Hichilema ran as the UPND candidate in the 2008 election, which was called following the death of President Levy Mwanawasa. He came 3rd with 19.7% of the vote. In <b>June 2009,</b> Hichilema's party, the UPND, formed a pact with Michael Sata's Patriotic Front (PF) to contest the 2011 election together. However, indecision on the pact candidate, deep mistrust, and accusations of tribalism from both sides resulted in the collapse of the pact in March 2011.[9]
+  
+  He was one of the two main candidates in the January 2015 presidential election, which he lost by a narrow margin of 27,757 votes<b> (1.66%)</b> against the ruling party's candidate, Edgar Lungu. Hichilema denounced the election as a sham and urged his supporters to remain calm. He again faced Lungu as the main opposition candidate in the <b>August 2016</b> presidential election, and was again narrowly defeated.
+  
+  In <b>April 2017</b>, he was arrested on suspicion of treason and charged with attempting to overthrow the government. He was in prison for four months before being given a nolle prosequi</p>
+          <p><strong>PRESIDENCY:</strong> Hichilema ran for President for the sixth time in the election held on <b>12 August 2021</b>. The electoral commission chairman <a href="https://en.wikipedia.org/wiki/Esau_Chulu" target="_blank">Esau chulu</a> declared that he had won the election in the early hours of 16 August.
+
+          Following his victory, Hichilema declared his wish to appoint qualified Zambians into his administration. Among his appointments were those of <a href="https://en.wikipedia.org/wiki/File:Sylvia_Masebo_close_up.png" target="_blank">sylvia Masebo</a>, <a href="https://wikimania.wikimedia.org/wiki/Special:MyLanguage/2025:Program" target="_blank"> Situmbeko Musokotwane</a>, and <a href="https://en.wikipedia.org/wiki/Jito_Kayumba" target="_blank">Jito Kayumba</a> among others.
+          
+          On 20 December 2024, two people were arrested on suspicion of plotting to hex Hichilema after being hired by a brother of politician <a href="https://en.wikipedia.org/wiki/Jay_Emmanuel_Banda" target="_blank">Jay Emmanuel Banda</a></p>
+          <p><strong>ACHIEVEMENTS:</strong></p>
+        <ul>
+          <li>Promoted economic recovery and job creation.</li>
+          <li>Introduced policies to combat corruption and improve governance.</li>
+          <li>Strengthened Zambia's international partnerships and foreign investment.</li>
+        </ul>
+        <p><strong>Wife:</strong> <a href="https://en.wikipedia.org/wiki/Mutinta_Hichilema" target="_blank">Mutinta Hichilema</a> <img src="images/mrs hh4.jpg" alt="Mutinta Hichilema"></p>
+        <p><strong>Children:</strong></p>
+        <ul>
+          <li>
+            <img src="https://via.placeholder.com/50" alt="Miyanda Hichilema">
+            <strong><a href="https://en.wikipedia.org/wiki/Miyanda_Hichilema" target="_blank">Miyanda Hichilema</a></strong> - Born: 1990, <em>Academic Background:</em> Studied economics at the University of Zambia.
+          </li>
+          <li>
+            <img src="https://via.placeholder.com/50" alt="Hakainde Jr.">
+            <strong><a href="https://en.wikipedia.org/wiki/Hakainde_Hichilema_Jr." target="_blank">Hakainde Jr.</a></strong> - Born: 1992, <em>Academic Background:</em> Attended school in Zambia and pursued further studies in business.
+          </li>
+          <li>
+            <img src="https://via.placeholder.com/50" alt="Chizooba Hichilema">
+            <strong><a href="https://en.wikipedia.org/wiki/Chizooba_Hichilema" target="_blank">Chizooba Hichilema</a></strong> - Born: 1995, <em>Academic Background:</em> Studied international relations at the University of Zambia.
+          </li>
+        </ul>
+        <p><strong>Status:</strong> Alive.</p>
+      </div>
+
+    </div>
+
+    <footer>
+      <p></p>
+  </footer>
+  </section>
+
+
+  <script>
+    
+    
+    function toggleDetails(element) {
+      const details = element.parentElement.nextElementSibling;
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+
+   
+    function changeSlide(button, direction) {
+      const slideshow = button.parentElement;
+      const slides = slideshow.querySelectorAll('.slide');
+      let currentIndex = 0;
+
+      
+      slides.forEach((slide, index) => {
+        if (slide.style.display === 'block') {
+          currentIndex = index;
+        }
+        slide.style.display = 'none';
+      });
+
+      
+      let newIndex = currentIndex + direction;
+      if (newIndex >= slides.length) newIndex = 0;
+      if (newIndex < 0) newIndex = slides.length - 1;
+
+      slides[newIndex].style.display = 'block';
+    }
+
+    function startSlideshow(slideshow) {
+      const slides = slideshow.querySelectorAll('.slide');
+      let currentIndex = 0;
+
+      setInterval(() => {
+        slides[currentIndex].style.display = 'none';
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].style.display = 'block';
+      }, 5000);
+    }
+
+    document.querySelectorAll('.slideshow-container').forEach(slideshow => {
+      const slides = slideshow.querySelectorAll('.slide');
+      slides.forEach((slide, index) => {
+        if (index === 0) {
+          slide.style.display = 'block';
+        } else {
+          slide.style.display = 'none';
+        }
+      });
+
+     
+      startSlideshow(slideshow);
+    }); 
+  </script>
+</body>
+</html>

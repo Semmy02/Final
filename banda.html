@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presidents of Zambia</title>
+  
+ <nav>
+    <div class="logo">Presidents oz Zambia</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="menu" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <a href="president.html">Back</a>
+  <link rel="stylesheet" href="css/banda.css"> 
+    
+</head>
+<body>
+  <header>
+    <h1>Rupiah Banda</h1>
+
+    <!-- Rupiah Banda -->
+   
+        </div>
+      <div class="details">
+        <p><strong>Academic Background:</strong> Rupiah Banda studied at the University of Addis Ababa and later pursued diplomatic training.</p>
+        <p><strong>Achievements:</strong></p>
+        <ul>
+          <li>Maintained economic stability during the global financial crisis.</li>
+          <li>Promoted infrastructure development, including road construction.</li>
+          <li>Strengthened Zambia's international relations.</li>
+        </ul>
+        <p><strong>Wife:</strong> <a href="https://en.wikipedia.org/wiki/Thandiwe_Banda" target="_blank">Thandiwe Banda</a> <img src="images/mrs banda 2.jpg" alt="Thandiwe Banda"></p>
+        <p><strong>Children:</strong></p>
+        <ul>
+          <li>
+            <img src="images/james 1.jpg" alt="James Banda">
+            <strong><a href="https://en.wikipedia.org/wiki/James_Banda" target="_blank">James Banda</a></strong> - Born: 1965, Spouse: Unknown. <em>Academic Background:</em> Studied economics at the University of Zambia.
+          </li>
+          <li>
+            <img src="images/henry1.jpg" alt="Henry Banda">
+            <strong><a href="https://en.wikipedia.org/wiki/Henry_Banda" target="_blank">Henry Banda</a></strong> - Born: 1968, Spouse: Unknown. <em>Academic Background:</em> Attended school in Zambia and pursued further studies abroad.
+          </li>
+        </ul>
+        <p><strong>Death:</strong> March 11, 2022, in Lusaka, Zambia. Cause: Colon cancer.</p>
+      </div>
+    </div>
+
+ 
+
+    <footer>
+      <p></p>
+  </footer>
+  </section>
+
+
+  <script>
+    
+    
+    function toggleDetails(element) {
+      const details = element.parentElement.nextElementSibling;
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+
+   
+    function changeSlide(button, direction) {
+      const slideshow = button.parentElement;
+      const slides = slideshow.querySelectorAll('.slide');
+      let currentIndex = 0;
+
+      
+      slides.forEach((slide, index) => {
+        if (slide.style.display === 'block') {
+          currentIndex = index;
+        }
+        slide.style.display = 'none';
+      });
+
+      
+      let newIndex = currentIndex + direction;
+      if (newIndex >= slides.length) newIndex = 0;
+      if (newIndex < 0) newIndex = slides.length - 1;
+
+      slides[newIndex].style.display = 'block';
+    }
+
+    function startSlideshow(slideshow) {
+      const slides = slideshow.querySelectorAll('.slide');
+      let currentIndex = 0;
+
+      setInterval(() => {
+        slides[currentIndex].style.display = 'none';
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].style.display = 'block';
+      }, 5000);
+    }
+
+    document.querySelectorAll('.slideshow-container').forEach(slideshow => {
+      const slides = slideshow.querySelectorAll('.slide');
+      slides.forEach((slide, index) => {
+        if (index === 0) {
+          slide.style.display = 'block';
+        } else {
+          slide.style.display = 'none';
+        }
+      });
+
+     
+      startSlideshow(slideshow);
+    }); 
+  </script>
+</body>
+</html>

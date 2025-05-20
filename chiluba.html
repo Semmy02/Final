@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presidents of Zambia</title>
+ <link rel="stylesheet" href="css/chiluba.css"> 
+
+  
+ <nav>
+    <div class="logo">Presidents of Zambia</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="menu" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+
+  <a href="president.html">Back</a>
+  <link rel="stylesheet" href="styles.css"> 
+  <script src="script.js"></script>
+  
+</head>
+<body>
+  <header>
+    <h1>Frederick chiluba</h1>
+
+    <!-- Frederick Chiluba -->
+   
+      <div class="details">
+        <p><strong>Early life</strong> Chiluba was born to <b>Jacob Titus Chiluba Nkonde</b> and <b>Diana Kaimba </b>and grew up in <b><i>Luapula Province</i></b> where he was born. He did his basic education at
+           <b>Mambilima Mbolo Special School</b> and his secondary education at <b>Kawambwa Boys Technical Secondary School</b> in <a href="https://en.wikipedia.org/wiki/Kawambwa" target="_blank">kawambwa</a>, where he was expelled in the second year for political
+            activities. He became a bus conductor, and later a politician. He worked as a city councilor before becoming an accounts assistant at Atlas Copco. He later joined the National Union of Building.</p>
+         
+            <p><strong>POLITICS</strong>In 1990, soon after UNIP gave up its monopoly on power, he helped form the Movement for <a href="https://en.wikipedia.org/wiki/Movement_for_Multi-Party_Democracy" target="_blank"> Multiparty Democracy (MMD)</a>, and became its
+             presidential candidate in the snap 1991 election called as part of the deal that ended one-party rule. Due in part to festering resentment at UNIP's 25-year rule
+              (including 17 years as the only legal party), Chiluba defeated Kaunda in a massive landslide, taking 75 percent of the vote to Kaunda's 25 percent–the second-biggest
+               margin of victory for a contested election in Zambian history. Chiluba took office on <b>2 November</b> of that year. On<b> 29 December 1991</b>, he declared Zambia a <b>Christian nation</b>.
+                This declaration was included in the 2016 Constitutional Amendment Bill which is part of the current Constitution of the Republic of Zambia. He won re-election to a 
+                second five-year term in 1996 despite a lawsuit questioning his birthplace and hence his eligibility for the post.</p>     
+             
+                <p>In 1997 his government survived a <a href="https://en.wikipedia.org/wiki/1997_Zambian_coup_attempt" target="_blank"> coup attempt</a> after which Chiluba immediately declared a state of emergency and began jailing, without charges, persons suspected of involvement in the coup. These included several Zambian politicians, including those from opposition parties and the country's previous President,<b>Kenneth Kaunda</b>.
+                  In late 2001, Chiluba divorced his second wife, <a href="https://en.wikipedia.org/wiki/Vera_Chiluba">vera</a> with whom he had nine children, namely <b>Helen, Miko, Hortensia, Castro, Chongo, Kaindu, Huldah, Frederick Jr and Verocia</b> . With his first wife he had <b>Tito and Nikombe</b>. 
+
+                 He later married the MMD Women's Chairperson,<b> Regina Mwanza</b> a divorcee. Despite his party's overwhelming majority in parliament, he failed to win support in his bid to amend the 
+                constitution allowing him to run for a third term. No member of parliament ever moved the motion in the house to amend the national constitution, the government never presented any paper on the matter nor was
+                 there any referendum to amend the national constitution. The third term debate was between different groups within and outside the MMD. Chiluba himself was quiet about it. He stepped down at the end of his term
+                  on<b> 2 January 2002</b>, and was replaced by <b>Levy Mwanawasa</b>, his one-time vice-president. Chiluba started out as a socialist, but accepted some economic reforms.</p>
+
+              <p><strong>ACHIEVEMENTS</strong></p>
+
+        <ul>
+          <li>Introduced multi-party democracy in Zambia in 1991.</li>
+          <li>Implemented economic liberalization policies.</li>
+          <li>Promoted privatization of state-owned enterprises.</li>
+        </ul>
+        <p><strong>Wife:</strong> <a href="https://en.wikipedia.org/wiki/Vera_Chiluba" target="_blank">Vera Chiluba</a> <img src="images/vera2.jpg" alt="Vera Chiluba"></p>
+        <p><strong>Children:</strong></p>
+        <ul>
+          <li>
+            <img src="images/regina1.jpg" alt="Regina Chiluba">
+            <strong><a href="https://en.wikipedia.org/wiki/Regina_Chiluba" target="_blank">Regina Chiluba</a></strong> - Born: 1970, <em>Academic Background:</em> Studied at the University of Zambia.
+          </li>
+          <li>
+            <img src="images/mutale2.jpg" alt="Mutale Chiluba">
+            <strong><a href="https://en.wikipedia.org/wiki/Mutale_Chiluba" target="_blank">Mutale Chiluba</a></strong> - Born: 1972, <em>Academic Background:</em> Attended school in Zambia and pursued further studies in business.
+          </li>
+        </ul>
+        <p><strong>Death:</strong> June 18, 2011, in Lusaka, Zambia. Cause: Heart failure.</p>
+      </div>
+    </div>
+
+
+    <footer>
+      <p></p>
+  </footer>
+  </section>
+
+
+  <script>
+    
+    
+    function toggleDetails(element) {
+      const details = element.parentElement.nextElementSibling;
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+
+   
+    function changeSlide(button, direction) {
+      const slideshow = button.parentElement;
+      const slides = slideshow.querySelectorAll('.slide');
+      let currentIndex = 0;
+
+      
+      slides.forEach((slide, index) => {
+        if (slide.style.display === 'block') {
+          currentIndex = index;
+        }
+        slide.style.display = 'none';
+      });
+
+      
+      let newIndex = currentIndex + direction;
+      if (newIndex >= slides.length) newIndex = 0;
+      if (newIndex < 0) newIndex = slides.length - 1;
+
+      slides[newIndex].style.display = 'block';
+    }
+
+    function startSlideshow(slideshow) {
+      const slides = slideshow.querySelectorAll('.slide');
+      let currentIndex = 0;
+
+      setInterval(() => {
+        slides[currentIndex].style.display = 'none';
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].style.display = 'block';
+      }, 5000);
+    }
+
+    document.querySelectorAll('.slideshow-container').forEach(slideshow => {
+      const slides = slideshow.querySelectorAll('.slide');
+      slides.forEach((slide, index) => {
+        if (index === 0) {
+          slide.style.display = 'block';
+        } else {
+          slide.style.display = 'none';
+        }
+      });
+
+     
+      startSlideshow(slideshow);
+    }); 
+  </script>
+</body>
+</html>
